@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="579503716251-gdm87331q7is4i8ojq97jerlr1bvt902.apps.googleusercontent.com">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <title>UrGuideBook</title>
+</head>
+<body>
+<div id="navigation">
+<!-- Navbar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">UrGuideBook</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Favourite places<span class="caret"></span></a>
+                <ul id="favorites" class="dropdown-menu">
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="g-signin2 unsigned" data-onsuccess="onSignIn" role="button"></a></li>
+            <li><a href="#" id="logOut" class="loginBtn loginBtn--signOut" onclick="signOut()"><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
+        </ul>
+
+        <button class="btn btn-warning navbar-btn">Recommend</button>
+        <!--<button type="button" id="filter" class="btn btn-primary navbar-btn unclicked" onclick="selectRadius()">Set radius options</button>
+        <button type="button" id="remove_filter" class="btn btn-danger" onclick="removeRadius()">Delete</button> -->
+    </div>
+</nav>
+</div>
+<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+
+<!-- Карта по textSearch -->
+<div id="map"></div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script async defer type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC06cPZeOM8QRvBuj6Yl0uUOBf2r9-Weow&libraries=places,drawing&callback=initMap"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--Own JavaScript -->
+<script type="text/javascript" src="google.js"></script>
+<script type="text/javascript" src="signIn.js"></script>
+
+</body>
+</html>
